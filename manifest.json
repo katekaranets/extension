@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Info",
+  "description": "lalala",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ru.wikipedia.org/*"],
+      "js": ["pageScript.js"]
+    },
+    {
+      "matches": ["https://www.google.by/*"],
+      "js": ["pageScript2.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ru.wikipedia.org/*",
+    "https://www.google.by/*",
+    "https://ajax.googleapis.com/"
+  ]
+}
